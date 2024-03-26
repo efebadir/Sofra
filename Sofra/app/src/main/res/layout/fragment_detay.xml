@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/beyazYeni"
+    tools:context=".ui.fragment.DetayFragment">
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/checkbox"
+        android:layout_width="61dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbarDetay"
+        app:lottie_autoPlay="false"
+        app:lottie_loop="false"
+        app:lottie_rawRes="@raw/favoricheck" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/animeAdd"
+        android:layout_width="159dp"
+        android:layout_height="181dp"
+        app:layout_constraintBottom_toTopOf="@+id/buttonSepet"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonFavEkle"
+        app:layout_constraintVertical_bias="1.0"
+        app:lottie_autoPlay="false"
+        app:lottie_loop="false"
+        app:lottie_rawRes="@raw/sepet" />
+
+    <ImageButton
+        android:id="@+id/imageButtonAzalt"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/shapecircle"
+        android:src="@drawable/left"
+        app:layout_constraintBottom_toBottomOf="@+id/editTextSepetNumberAdet"
+        app:layout_constraintEnd_toStartOf="@+id/editTextSepetNumberAdet"
+        app:layout_constraintTop_toTopOf="@+id/editTextSepetNumberAdet" />
+
+    <ImageButton
+        android:id="@+id/imageButtonArttir"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        android:background="@drawable/shapecircle"
+        android:src="@drawable/right"
+        app:layout_constraintBottom_toBottomOf="@+id/editTextSepetNumberAdet"
+        app:layout_constraintStart_toEndOf="@+id/editTextSepetNumberAdet"
+        app:layout_constraintTop_toTopOf="@+id/editTextSepetNumberAdet" />
+
+    <EditText
+        android:id="@+id/editTextSepetNumberAdet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="24dp"
+        android:background="@null"
+        android:inputType="number"
+        android:text="1"
+        android:textAlignment="center"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@+id/buttonSepet"
+        app:layout_constraintEnd_toEndOf="@+id/ivUrunResim"
+        app:layout_constraintStart_toStartOf="@+id/ivUrunResim"
+        app:layout_constraintTop_toBottomOf="@+id/twUrunFiyat" />
+
+    <ImageView
+        android:id="@+id/ivUrunResim"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:src="@drawable/django"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbarDetay" />
+
+    <TextView
+        android:id="@+id/tw_urun_ad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Izgara Somon"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivUrunResim" />
+
+    <TextView
+        android:id="@+id/twUrunFiyat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="TextView"
+        android:textAlignment="center"
+        android:textColor="@color/green"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tw_urun_ad" />
+
+    <ImageButton
+        android:id="@+id/imageButtonBack"
+        android:layout_width="35dp"
+        android:layout_height="31dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="76dp"
+        android:background="@color/white"
+        android:src="@drawable/back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonSepet"
+        style="@style/Widget.AppCompat.Button.Small"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:background="@drawable/shapetop"
+        android:text="Sepete Ekle"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:icon="@drawable/shopping_add"
+        app:iconPadding="0dp"
+        app:iconSize="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarDetay"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@drawable/shapebottom"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/toolbarTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/orbitron"
+            android:text="SOFRA"
+            android:textColor="@color/beyazYeni"
+            android:textSize="24sp"
+            tools:layout_editor_absoluteX="176dp"
+            tools:layout_editor_absoluteY="15dp" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <Button
+        android:id="@+id/buttonFavEkle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/shaperight"
+        android:insetTop="0dp"
+        android:paddingEnd="4dp"
+        android:text="Favorilere\nKaydet"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkbox" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
